@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+
+<head>
+
+</head>
+
+<body>
+
+    <form onsubmit="calculate()">
+
+        Enter First Value<input type="number" id="firstValue" required> <br>
+        Enter Second Value<input type="number" id="secondValue" required><br>
+        Enter third Value<input type="number" id="thirdValue" required><br>
+        Result <input type="number" id="result" readonly><br> 
+        <button type="submit" id="show"> Show </button>
+        <button type="reset" id="clear"> clear </button>
+
+    </form>
+    <script src="script.js"></script>
+
+    <script>
+
+        function calculate() {
+            let a = document.getElementById("firstValue").value
+            let b = document.getElementById("secondValue").value
+            let c = document.getElementById("thirdValue").value
+            // let d = a*b*c; //same as below
+            let d= multiplyNumbers(a,b,c);
+            document.getElementById("result").value= d;
+        }
+
+
+    </script>
+
+</body>
+
+</html>
